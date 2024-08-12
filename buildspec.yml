@@ -17,7 +17,7 @@ phases:
     commands:
       - echo "Running tests..."
       - echo "Building Docker image..."
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/sample-python:latest" .
+      - docker build -t "docker.io/$DOCKER_REGISTRY_USERNAME/sample-python:latest" .
       - docker push "docker.io/$DOCKER_REGISTRY_USERNAME/sample-python:latest"
   post_build:
     commands:
